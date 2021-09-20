@@ -1,3 +1,77 @@
+body{
+    background-color: #EDD263;
+}
+*:focus{
+    outline: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* @@@@@@@ start navigation menu @@@@@@@*/
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+.logo h2{
+    font-size: 30px;
+    font-style: italic;
+    letter-spacing: 2px;
+
+}
+.menu{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 10px;
+}
+.menu li{
+    margin-right: 15px;
+}
+.menu li a{
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* @@@@@@@ end navigation menu @@@@@@@*/
+
+
+
+/* @@@@@@@ start user input field field @@@@@@@*/
+div#input-field{
+    margin: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+input#input-box {
+    padding: 13px;
+    width: 500px;
+    border-radius: 5px 0px 0px 5px;
+    border: none;
+}
+
+input#search-btn {
+    background-color: #3B2D64;
+    color: #fff;
+    border: none;
+    padding: 13px;
+    border-radius:0 5px 5px 0px;
+    cursor: pointer;
+}
+
+/* @@@@@@@ end user input field @@@@@@@*/
+
+
+
+/* @@@@@@@ start meal section @@@@@@@ */
 div#meal-section {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -6,7 +80,7 @@ div#meal-section {
     margin-top: 2rem;
 }
 
-.single-meal{
+.single-meal {
     background-color: #F8F7F5;
     width: 100%;
     margin: 10px;
@@ -14,22 +88,49 @@ div#meal-section {
     border-radius: 5px;
 }
 
-.single-meal img{
+.single-meal img {
     width: 100%;
     border-radius: 10px 10px 0 0;
 }
-.single-meal h2{
+
+.single-meal h2 {
     text-align: center;
 }
+/* @@@@@@@ end meal section @@@@@@@ */
 
-/* preview */
 
-div#preview-section img {
-    border-radius: 10px;
-    width: 600px;
-    height: 400px;
+/* @@@@@@@ start preview section @@@@@@@ */
+
+div#preview-section {
+    background-color: #fff;
+    width: 550px;
+    margin: auto;
+    padding-bottom: 10px;
+    display: none;
+    overflow: hidden;
+    
 }
-div#preview-section ul{
+div#preview-section h2, h4{
+    padding-left: 10px;
+}
+div#preview-section img {
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+    height: 300px;
+}
+
+div#preview-section ul {
+    list-style: none;
+    padding-left: 10px;
+}
+ul#ingredient {
     list-style: none;
     padding: 0;
+    font-size: 17px;
 }
+
+i.fa.fa-check-square {
+    color: orangered;
+}
+
+/* @@@@@@@ end preview section @@@@@@@ */

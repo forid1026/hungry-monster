@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,17 +11,49 @@
     <link rel="stylesheet" href="./css/fontawesome.min.css">
     <!-- main css -->
     <link rel="stylesheet" href="./css/style.css">
+    <style>
+    </style>
 </head>
-<body>
-    
-    <div id="input-field">
-        <input type="text" placeholder="Search your meal" id="input-box">
-        <input type="submit" value="Search" id="search-btn">
 
-        
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <h2><a href="index.html">Hungry Master</a></h2>
+            </div>
+            <div class="main-menu">
+                <ul class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Recipes</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+        </nav>
     </div>
-    <div id="preview-section"></div>
-    <div id="meal-section"></div>
+
+    <div class="container">
+        <div id="input-field">
+            <input type="text" placeholder="Search your meal" id="input-box">
+            <input type="submit" value="Search" id="search-btn">
+        </div>
+    </div>
+    <!-- preview section -->
+    
+    <div class="container">
+        <div id="preview-section"></div>
+    </div>
+
+    <!-- main meal section -->
+    <div class="container">
+        <div id="meal-section"></div>
+    </div>
+
+    <!-- validation section -->
+    <div class="container">
+        <h4 id="not-found"></h4>
+    </div>
     <script src="./js/app.js"></script>
 </body>
+
 </html>
