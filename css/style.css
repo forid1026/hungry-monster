@@ -107,7 +107,7 @@ div#preview-section {
     margin: auto;
     padding-bottom: 10px;
     display: none;
-    overflow: hidden;
+    border-radius: 15px 15px 0 0;
     
 }
 div#preview-section h2, h4{
@@ -134,3 +134,16 @@ i.fa.fa-check-square {
 }
 
 /* @@@@@@@ end preview section @@@@@@@ */
+
+
+
+/* @@@@@@@ Start Validation section @@@@@@@ */
+#not-found h2{
+    text-align: center;
+}
+#not-found #miss-match{
+    color: #DC3545;
+    text-decoration:underline ;
+}
+
+/* @@@@@@@ End Validation section @@@@@@@ */

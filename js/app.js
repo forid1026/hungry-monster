@@ -1,13 +1,14 @@
 const searchBtn = document.getElementById('search-btn');
+const preview = document.getElementById('preview-section');
 
 //search event handler
 searchBtn.addEventListener('click', () => {
     const mealName = document.getElementById('input-box').value;
-    const preview = document.getElementById('preview-section');
     document.getElementById('meal-section').innerHTML = '';
     preview.innerHTML = '';
     document.getElementById('not-found').innerHTML = '';
     if (mealName) {
+        document.getElementById('preview-section').innerHTML = '';
         const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${mealName}`;
         fetch(url)
             .then(res => res.json())
@@ -15,7 +16,9 @@ searchBtn.addEventListener('click', () => {
     }
     else {
         const notFound = document.getElementById('not-found');
+        preview.innerHTML = '';
         notFound.innerHTML = `<h2>You have entered empty search </h2> `;
+        
     }
 
 })
@@ -48,7 +51,9 @@ const displayMeal = (data, mealName) => {
 
     else {
         const notFound = document.getElementById('not-found');
-        notFound.innerHTML = `<h2>Your entire meal name ${mealName} not found! Please try another meal.</h2> `;
+        preview.innerHTML = '';
+        notFound.innerHTML = `<h2>Your entire meal name <span id="miss-match">${mealName}</span> not found! Please try another meal.</h2> `;
+        
     }
     document.getElementById('input-box').value = '';
 }
@@ -57,7 +62,7 @@ const displayMeal = (data, mealName) => {
 //meal preview
 const mealDetail = (detail) => {
     const meal = detail.meals[0];
-    const preview = document.getElementById('preview-section');
+    // const preview = document.getElementById('preview-section');
     preview.style.display = 'block';
     const { strMeal, strMealThumb } = meal;
     preview.innerHTML = `
